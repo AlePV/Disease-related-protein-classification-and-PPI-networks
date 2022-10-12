@@ -3,7 +3,7 @@
 This Knime workflow uses multiple databases to search for disease related proteins by experimental reports or manual annotations, then proteins are classified by the development phase of their related drugs and a protein-protein network is generated.
 
 <p align="center">
-    <img src="https://github.com/ramirezlab/WIKI/blob/master/KNIME/Active%20compounds%20for%20a%20given%20target%20from%20ChEMBL/media/WF.png" width="1000">
+    <img src="[https://github.com/ramirezlab/WIKI/blob/master/KNIME/Active%20compounds%20for%20a%20given%20target%20from%20ChEMBL/media/WF.png](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Disease_related_protein_classification_and_PPI_networks_WF.png?raw=true)" width="1000">
 </p>
 
 ## Requirements ##
