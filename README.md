@@ -19,8 +19,16 @@ This Knime workflow uses multiple databases to search for disease related protei
 
 ## 1. Conect ChEMBL local MySQL database with the workflow ##
 
-First download and import our workflow [Disease_related_protein_classification_and_PPI_networks](https://github.com/ramirezlab/WIKI/raw/master/KNIME/Active%20compounds%20for%20a%20given%20target%20from%20ChEMBL/01_Active_compounds_for_a_given_target_from_ChEMBL.knwf) to Knime software. Then configure **MySQL Connector** node by right clicking at the node and click configure, and complete Hostname, Database name, username and Password based on your personal MySQL information.
+First download and import our workflow [Disease_related_protein_classification_and_PPI_networks](https://github.com/ramirezlab/WIKI/raw/master/KNIME/Active%20compounds%20for%20a%20given%20target%20from%20ChEMBL/01_Active_compounds_for_a_given_target_from_ChEMBL.knwf) to Knime software. Then configure **MySQL Connector** node by right clicking at the node and click configure option. Complete the fields with your Hostname, Database name, username and Password based on your personal MySQL information.
 
 <p align="center">
 <img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/MySQL_Connector.png?raw=true" width="500">
+</p>
+
+## 2. Select input files from TTD and Open Targets Platform ##
+
+[Download](http://db.idrblab.net/ttd/full-data-download) the files "Target to disease mapping with ICD identifiers" and "Drug to disease mapping with ICD identifiers" files from TTD and configure the node "Therapeutic Target Database" by browsing the files. Taget file first and Drugs file second.
+
+<p align="center">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Therapeutic_Target_Database.png?raw=true" width="500">
 </p>
