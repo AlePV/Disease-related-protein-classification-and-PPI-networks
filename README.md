@@ -66,7 +66,7 @@ Then configure and select one disease from the list on "Disease selector" node. 
 <img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Disease_selector.png?raw=true" width="500">
 </p>
 
-##4. Choose a folder to write the results and execute the workflow ##
+## 4. Choose a folder to write the results and execute the workflow ##
 
 Configure "Folder to write results" node by browsing to a folder to write result files. Make sure to select a folder and not a file.
 
@@ -76,4 +76,4 @@ Configure "Folder to write results" node by browsing to a folder to write result
 
 Finaly execute the rest of the workflow by clicking on "Execute all executable nodes" buttom or press (SHIFT+F7).
 
-## 4. Results ##
+## 5. Results ##
