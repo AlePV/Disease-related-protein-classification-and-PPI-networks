@@ -77,3 +77,8 @@ Configure "Folder to write results" node by browsing to a folder to write result
 Finaly execute the rest of the workflow by clicking on "Execute all executable nodes" buttom or press (SHIFT+F7).
 
 ## 5. Results ##
+
+1_PPI_network_Alzheimer's disease_no-opentarget-filter.csv
+2_PPI_network_Alzheimer's disease_opentarget-filter.csv
+3_Targets_score_Alzheimer's disease_no-opentarget-filter.xlsx
+4_Targets_score__Alzheimer's disease_opentarget-filter.xlsx
