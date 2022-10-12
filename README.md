@@ -78,7 +78,7 @@ Finaly execute the rest of the workflow by clicking on "Execute all executable n
 
 ## 5. Results ##
 
-1_PPI_network_Alzheimer's disease_no-opentarget-filter.csv
-2_PPI_network_Alzheimer's disease_opentarget-filter.csv
-3_Targets_score_Alzheimer's disease_no-opentarget-filter.xlsx
-4_Targets_score__Alzheimer's disease_opentarget-filter.xlsx
+- 1_PPI_network_Alzheimer's disease_no-opentarget-filter.csv
+- 2_PPI_network_Alzheimer's disease_opentarget-filter.csv
+- 3_Targets_score_Alzheimer's disease_no-opentarget-filter.xlsx
+- 4_Targets_score__Alzheimer's disease_opentarget-filter.xlsx
