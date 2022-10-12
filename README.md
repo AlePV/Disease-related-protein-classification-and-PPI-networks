@@ -27,10 +27,26 @@ First download and import our workflow [Disease_related_protein_classification_a
 
 ## 2. Select input files from TTD and Open Targets Platform ##
 
-Download the files "Target to disease mapping with ICD identifiers" and "Drug to disease mapping with ICD identifiers" files from [TTD](http://db.idrblab.net/ttd/full-data-download) and configure the node "Therapeutic Target Database" by browsing the files. Taget file first and Drugs file second.
+Download the files "Target to disease mapping with ICD identifiers" and "Drug to disease mapping with ICD identifiers" files from [TTD](http://db.idrblab.net/ttd/full-data-download).
+
+<p align="center">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/TTD_website.png?raw=true" width="500">
+</p>
+
+Configure the "Therapeutic Target Database" node by browsing the files. Taget file first and Drugs file second.
 
 <p align="center">
 <img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Therapeutic_Target_Database.png?raw=true" width="500">
 </p>
 
-On Open Targets Platform search for any Disease and and download the Associated Targets file on TSV format
+On Open Targets Platform search for any Disease and download the Associated Targets file on TSV format.
+
+<p align="center">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Open_Targets_Platform_website.png?raw=true" width="500">
+</p>
+
+Configure "Open Targets Platform" node by browsing the file.
+
+<p align="center">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Open_Targets_Platform.png?raw=true" width="500">
+</p>
