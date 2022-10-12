@@ -50,3 +50,18 @@ Configure "Open Targets Platform" node by browsing the file.
 <p align="center">
 <img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Open_Targets_Platform.png?raw=true" width="500">
 </p>
+
+
+## 3. Disease selection ##
+
+Frist execute "Disease list" node to read all available diseases on ChEMBL database.
+
+<p align="center">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Disease_list_node.png?raw=true" width="500">
+</p>
+
+Then configure and select one disease from the list on "Disease selector" node. **NOTE:** If no list is displayed on "Disease selector" configuration reset and execute "Disease list" again, and try to configure "Disease selector" again.
+
+<p align="center">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Disease_selector.png?raw=true" width="500">
+</p>
