@@ -78,7 +78,41 @@ Finaly execute the rest of the workflow by clicking on "Execute all executable n
 
 ## 5. Results ##
 
-- [1_PPI_network_Alzheimer's disease_no-opentarget-filter.csv](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/1_PPI_network_Alzheimer's%20disease_no-opentarget-filter.csv). Has protein-protein interactions, as Prot_A and Prot_B columns with the protein genes, interactions string score and uniprot ID for each protein. If the target is a protein complex, the gene name is replaced by ChEMBL ID of the complex, and the uniprot ID will be a list.   
-- [2_PPI_network_Alzheimer's disease_opentarget-filter.csv](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/2_PPI_network_Alzheimer's%20disease_opentarget-filter.csv). Same as the previous file, but including only the targets found on Open Targets Platform. 
-- [3_Targets_score_Alzheimer's disease_no-opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/3_Targets_score_Alzheimer's%20disease_no-opentarget-filter.xlsx). List of proteins related to the disease, sorted by target score.
-- [4_Targets_score__Alzheimer's disease_opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/4_Targets_score_Alzheimer's%20disease_opentarget-filter.xlsx). Same as the previous file, but including only the targets found on Open Targets Platform.
+### [1_PPI_network_Alzheimer's disease_no-opentarget-filter.csv](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/1_PPI_network_Alzheimer's%20disease_no-opentarget-filter.csv) ###
+ Has protein-protein interactions, as Prot_A and Prot_B columns with the protein genes, uniprot ID for each protein and Disease. If the target is a protein complex, the gene name is replaced by ChEMBL ID of the complex, and the uniprot ID will be a list of uniprot IDs.
+ 
+| Prot_A        | Prot_B        | uniprotID_Prot_A            | uniprotID_Prot_B            | Disease             |
+|---------------|---------------|-----------------------------|-----------------------------|---------------------|
+| GNB3          | GNB2          | P16520                      | P62879                      | Alzheimer's disease |
+| GNB3          | CHEMBL3883319 | P16520                      | P62873 P59768               | Alzheimer's disease |
+| GNB3          | GNB1          | P16520                      | P62873                      | Alzheimer's disease |
+| GNB3          | GNB4          | P16520                      | Q9HAV0                      | Alzheimer's disease |
+| GNB3          | GNB5          | P16520                      | O14775                      | Alzheimer's disease |
+| GNB3          | HTR7          | P16520                      | P34969                      | Alzheimer's disease |
+| GNB3          | GNAL          | P16520                      | P38405                      | Alzheimer's disease |
+| GNB3          | GNAS          | P16520                      | P63092                      | Alzheimer's disease |
+| GNB4          | CHEMBL3883319 | Q9HAV0                      | P62873 P59768               | Alzheimer's disease |
+| GNB4          | GNB1          | Q9HAV0                      | P62873                      | Alzheimer's disease |
+
+### [2_PPI_network_Alzheimer's disease_opentarget-filter.csv](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/2_PPI_network_Alzheimer's%20disease_opentarget-filter.csv) ###
+Same as the previous file, but including only the targets found on Open Targets Platform. 
+### [3_Targets_score_Alzheimer's disease_no-opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/3_Targets_score_Alzheimer's%20disease_no-opentarget-filter.xlsx) ###
+List of proteins related to the disease, sorted by target score.
+
+| gene_name | target_type    | uniprotID | target_group   | source_db           | target_group_score | target_group_score_normalized | chembl_id_SplitResultList | Disease             |
+|-----------|----------------|-----------|----------------|---------------------|--------------------|-------------------------------|---------------------------|---------------------|
+| ACHE      | SINGLE PROTEIN | P22303    | T1, T2, T3, T4 | ChEMBL, STRING, TTD | 2,2                | 1                             | CHEMBL220                 | Alzheimer's disease |
+| APP       | SINGLE PROTEIN | P05067    | T1, T2, T3, T4 | ChEMBL, STRING, TTD | 2,2                | 1                             | CHEMBL2487                | Alzheimer's disease |
+| CBX1      | SINGLE PROTEIN | P83916    | T1, T2, T3, T4 | ChEMBL, STRING      | 2,2                | 1                             | CHEMBL1741193             | Alzheimer's disease |
+| DRD2      | SINGLE PROTEIN | P14416    | T1, T2, T3, T4 | ChEMBL, STRING, TTD | 2,2                | 1                             | CHEMBL217                 | Alzheimer's disease |
+| EHMT2     | SINGLE PROTEIN | Q96KQ7    | T1, T2, T3, T4 | ChEMBL, STRING      | 2,2                | 1                             | CHEMBL6032                | Alzheimer's disease |
+| GMNN      | SINGLE PROTEIN | O75496    | T1, T2, T3, T4 | ChEMBL, STRING      | 2,2                | 1                             | CHEMBL1293278             | Alzheimer's disease |
+| LMNA      | SINGLE PROTEIN | P02545    | T1, T2, T3, T4 | ChEMBL, STRING      | 2,2                | 1                             | CHEMBL1293235             | Alzheimer's disease |
+| PPARG     | SINGLE PROTEIN | P37231    | T1, T2, T3, T4 | ChEMBL, STRING, TTD | 2,2                | 1                             | CHEMBL235                 | Alzheimer's disease |
+| SLC6A4    | SINGLE PROTEIN | P31645    | T1, T2, T3, T4 | ChEMBL, STRING, TTD | 2,2                | 1                             | CHEMBL228                 | Alzheimer's disease |
+| SLCO1B1   | SINGLE PROTEIN | Q9Y6L6    | T1, T2, T3, T4 | ChEMBL, STRING      | 2,2                | 1                             | CHEMBL1697668             | Alzheimer's disease |
+
+### [4_Targets_score__Alzheimer's disease_opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/4_Targets_score_Alzheimer's%20disease_opentarget-filter.xlsx) ###
+Same as the previous file, but including only the targets found on Open Targets Platform.
+
+
