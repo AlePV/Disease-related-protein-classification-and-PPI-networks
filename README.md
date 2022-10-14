@@ -17,7 +17,7 @@ This Knime workflow uses multiple databases to search for disease related protei
 
 **To follow these instructions you must have already installed [Knime](https://www.knime.com/), [MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) and configured the lastest [ChEBML database](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/) on your machine.**
 
-## Setting ChEMBL DB with MySQL on Linux##
+## Setting ChEMBL DB with MySQL on Linux ##
 
 Quick step by step MySQL installation. Form more information visit [MySQL website](https://dev.mysql.com/doc/refman/8.0/en/installing.html).
 
