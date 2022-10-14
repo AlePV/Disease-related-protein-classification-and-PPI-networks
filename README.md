@@ -50,7 +50,7 @@ mysql> create database chembl_XX DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8
 
 Logout of MySQL and run the following command to load data to the database (**this could take several hours**):
 ```
-mysql> -uUSERNAME -pPASSWORD chembl_XX < chembl_XX_mysql.dmp
+mysql> -uYOURUSERNAME -pYOURPASSWORD chembl_XX < chembl_XX_mysql.dmp
 ```
 
 ## 1. Conect ChEMBL local MySQL database with the workflow ##
