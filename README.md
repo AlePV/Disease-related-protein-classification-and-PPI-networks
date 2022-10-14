@@ -17,6 +17,42 @@ This Knime workflow uses multiple databases to search for disease related protei
 
 **To follow these instructions you must have already installed [Knime](https://www.knime.com/), [MySQL](https://dev.mysql.com/doc/refman/8.0/en/installing.html) and configured the lastest [ChEBML database](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/) on your machine.**
 
+## Setting ChEMBL DB with MySQL on Linux##
+
+Quick step by step MySQL installation. Form more information visit [MySQL website](https://dev.mysql.com/doc/refman/8.0/en/installing.html).
+
+### MySQL installation: ### 
+```
+sudo apt update
+sudo apt install mysql-server
+```
+
+### MySQL root account passwords.  ###
+Use this code and follow the terminal instructions thet will be displayed.
+```
+sudo mysql_secure_installation
+```
+### Download ChEMBL database ###
+Download the last release of  ChEMBL database of mysql (chembl_XX_mysql.tar.gz). **From now on, replace any XX for your downloaded ChEMBL database version.**
+<p align="center">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/ChEMBLdb_download.png?raw=true" width="500">
+</p>
+
+Extract files:
+```
+tar -xvf chembl_XX_mysql.tar.gz
+```
+Log into MySQL and run the following command to create an empty database:
+```
+mysql> create database chembl_XX DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+
+```
+
+Logout of MySQL and run the following command to load data to the database (**this could take several hours**):
+```
+mysql> -uUSERNAME -pPASSWORD chembl_XX < chembl_XX_mysql.dmp
+```
+
 ## 1. Conect ChEMBL local MySQL database with the workflow ##
 
 First download and import our workflow [Disease_related_protein_classification_and_PPI_networks](https://github.com/ramirezlab/WIKI/raw/master/KNIME/Active%20compounds%20for%20a%20given%20target%20from%20ChEMBL/01_Active_compounds_for_a_given_target_from_ChEMBL.knwf) to Knime software. Then configure **MySQL Connector** node by right clicking at the node and click configure option. Complete the fields with your Hostname, Database name, username and Password based on your personal MySQL information.
@@ -95,9 +131,30 @@ Finaly execute the rest of the workflow by clicking on "Execute all executable n
 | GNB4          | GNB1          | Q9HAV0                      | P62873                      | Alzheimer's disease |
 
 ### [2_PPI_network_Alzheimer's disease_opentarget-filter.csv](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/2_PPI_network_Alzheimer's%20disease_opentarget-filter.csv) ###
-Same as the previous file, but including only the targets found on Open Targets Platform. 
-### [3_Targets_score_Alzheimer's disease_no-opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/3_Targets_score_Alzheimer's%20disease_no-opentarget-filter.xlsx) ###
-List of proteins related to the disease, sorted by target score.
+Same as the previous file, but including only targets found on Open Targets Platform.
+
+### [3_PPI-network_targets_attributes_Alzheimer's disease](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/sample_outputs/3_PPI-network_targets_attributes_Alzheimer's%20disease.csv) ###
+List of single targets (including protein complexes) with attributes to add custom styles on Cytoscape.
+
+| gene_name     | target_type     | target_group | target_group_score_normalized | Disease             |
+|---------------|-----------------|--------------|-------------------------------|---------------------|
+| ACHE          | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| APP           | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| CBX1          | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| DRD2          | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| EHMT2         | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| GMNN          | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| LMNA          | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| PPARG         | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| SLC6A4        | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| SLCO1B1       | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| TDP1          | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| USP1          | SINGLE PROTEIN  | T1 T2 T3 T4  | 1                             | Alzheimer's disease |
+| BCHE          | SINGLE PROTEIN  | T1 T2 T4     | 0.8285714285714285            | Alzheimer's disease |
+| CHRNE         | SINGLE PROTEIN  | T1 T2 T4     | 0.8285714285714285            | Alzheimer's disease |
+
+### [4_Targets_score_Alzheimer's disease_no-opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/3_Targets_score_Alzheimer's%20disease_no-opentarget-filter.xlsx) ###
+List of single proteins related to the disease, sorted by target score.
 
 | gene_name | target_type    | uniprotID | target_group   | source_db           | target_group_score | target_group_score_normalized | chembl_id_SplitResultList | Disease             |
 |-----------|----------------|-----------|----------------|---------------------|--------------------|-------------------------------|---------------------------|---------------------|
@@ -112,7 +169,8 @@ List of proteins related to the disease, sorted by target score.
 | SLC6A4    | SINGLE PROTEIN | P31645    | T1, T2, T3, T4 | ChEMBL, STRING, TTD | 2,2                | 1                             | CHEMBL228                 | Alzheimer's disease |
 | SLCO1B1   | SINGLE PROTEIN | Q9Y6L6    | T1, T2, T3, T4 | ChEMBL, STRING      | 2,2                | 1                             | CHEMBL1697668             | Alzheimer's disease |
 
-### [4_Targets_score__Alzheimer's disease_opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/4_Targets_score_Alzheimer's%20disease_opentarget-filter.xlsx) ###
-Same as the previous file, but including only the targets found on Open Targets Platform.
+### [5_Targets_score__Alzheimer's disease_opentarget-filter.xlsx](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/raw/main/sample_outputs/5_Targets_score_Alzheimer's%20disease_opentarget-filter.xlsx) ###
+Same as the previous file, but including only targets found on Open Targets Platform.
 
+### 6. Network visualization ###
 
