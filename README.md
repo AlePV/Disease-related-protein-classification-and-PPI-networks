@@ -28,10 +28,14 @@ sudo apt update
 sudo apt install mysql-server
 ```
 
-### MySQL root account passwords.  ###
-Use this code and follow the terminal instructions thet will be displayed.
+### MySQL root account password.  ###
+log into mysql database as sudo:
 ```
-sudo mysql_secure_installation
+sudo mysql
+```
+set a password for root user:
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 ### Download ChEMBL database ###
 Download the last release of  ChEMBL database of mysql (chembl_XX_mysql.tar.gz). **From now on, replace any XX for your downloaded ChEMBL database version.**
@@ -54,7 +58,7 @@ Logout of MySQL and run the following command to load data to the database (**th
 mysql> -uYOURUSERNAME -pYOURPASSWORD chembl_XX < chembl_XX_mysql.dmp
 ```
 
-## 1. Conect ChEMBL local MySQL database with the workflow ##
+## 1. Connect ChEMBL local MySQL database with the workflow ##
 
 First download and import our workflow [Disease_related_protein_classification_and_PPI_networks](https://github.com/ramirezlab/WIKI/raw/master/KNIME/Active%20compounds%20for%20a%20given%20target%20from%20ChEMBL/01_Active_compounds_for_a_given_target_from_ChEMBL.knwf) to Knime software. Then configure **MySQL Connector** node by right clicking at the node and click configure option. Complete the fields with your Hostname, Database name, username and Password based on your personal MySQL information.
 
