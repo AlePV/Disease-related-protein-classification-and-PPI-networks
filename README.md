@@ -27,8 +27,7 @@ Quick step by step MySQL installation. Form more information visit [MySQL websit
 sudo apt update
 sudo apt install mysql-server
 ```
-
-### MySQL root account password.  ###
+### MySQL root password.  ###
 log into mysql database as sudo:
 ```
 sudo mysql
@@ -47,15 +46,18 @@ Extract files:
 ```
 tar -xvf chembl_XX_mysql.tar.gz
 ```
-Log into MySQL and run the following command to create an empty database:
+Log into MySQL and enter yout password:
+```
+mysql -u root -p
+```
+Create an empty database:
 ```
 mysql> create database chembl_XX DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 
 ```
-
 Logout of MySQL and run the following command to load data to the database (**this could take several hours**):
 ```
-mysql> -uYOURUSERNAME -pYOURPASSWORD chembl_XX < chembl_XX_mysql.dmp
+mysql> -u root -p chembl_XX < chembl_XX_mysql.dmp
 ```
 
 ## 1. Connect ChEMBL local MySQL database with the workflow ##
