@@ -36,7 +36,7 @@ set a password for root user:
 ```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
-### Download ChEMBL database and load the data to MySQL ###
+### Download ChEMBL database and load data to MySQL ###
 Download the last release of  ChEMBL database of mysql (chembl_XX_mysql.tar.gz). **From now on, replace any XX for your downloaded ChEMBL database version.**
 <p align="center">
 <img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/ChEMBLdb_download.png?raw=true" width="500">
