@@ -183,5 +183,5 @@ Same as the previous file, but including only targets found on Open Targets Plat
 The network can be visualized with Cytoscape and the attributes can be added by loading [3_PPI-network_targets_attributes_Alzheimer's disease](https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/sample_outputs/3_PPI-network_targets_attributes_Alzheimer's%20disease.csv) file to the network nodes.
 
 <p align="center">
-<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/2_PPI_network_Alzheimer's%20disease.png?raw=true" width="500">
+<img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/2_PPI_network_AD.png?raw=true" width="500">
 </p>
