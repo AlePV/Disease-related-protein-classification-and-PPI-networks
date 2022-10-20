@@ -12,6 +12,7 @@ This Knime workflow uses multiple databases to search for disease related protei
 - T4: Score 0.1, the target has interactions with targets T1, T2 or T3.
 
 **Note:** some targets can have multiple target classifications.
+
 Finally the workflow provides protein-protein networks and lists of targets with their classifications for the indicated disease.  
 
 ## Requirements ##
