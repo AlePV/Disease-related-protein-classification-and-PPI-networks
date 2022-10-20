@@ -4,7 +4,14 @@
     <img src="https://github.com/AlePV/Disease_related_protein_classification_and_PPI_networks/blob/main/media/Disease_related_protein_classification_and_PPI_networks_WF.png?raw=true" width="1000">
 </p>
 
-This Knime workflow uses multiple databases to search for disease related proteins by experimental reports or manual annotations, then proteins are classified by the development phase of their related drugs and a protein-protein network is generated...
+This Knime workflow uses multiple databases to search for disease related proteins by experimental reports or manual annotations, then proteins are classified by the development phase of their related drugs and assigned a score as follows:
+
+- T1: Score 1.0, the target has approved compounds or phase 4 of development for indicated disease.
+- T2: Score 0.7, the target has compounds under clinical trials or phases 1 to 3 of development for indicated disease.
+- T3: Score 0.4, the target has compounds under preclinical investigations or phase 0 of development for indicated disease.
+- T4: Score 0.1, the target has interactions with targets T1, T2 or T3.
+
+Finally the workflow provides protein-protein networks and lists of targets with their classifications for the indicated disease.  
 
 ## Requirements ##
 **This workflow has been programed to be used on Linux OS only.**
