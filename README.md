@@ -10,7 +10,7 @@ This Knime workflow uses multiple databases to search for disease related protei
 - T2: Score 0.7, the target has compounds under clinical trials or phases 1 to 3 of development for indicated disease.
 - T3: Score 0.4, the target has compounds under preclinical investigations or phase 0 of development for indicated disease.
 - T4: Score 0.1, the target has interactions with targets T1, T2 or T3.
-
+** note: ** some targets can have multiple target classifications.
 Finally the workflow provides protein-protein networks and lists of targets with their classifications for the indicated disease.  
 
 ## Requirements ##
