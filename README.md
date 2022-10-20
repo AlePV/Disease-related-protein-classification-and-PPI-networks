@@ -41,7 +41,7 @@ sudo mysql
 ```
 set a password for root user:
 ```
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 ### Download ChEMBL database and load data to MySQL ###
 Download the last release of  ChEMBL database of mysql (chembl_XX_mysql.tar.gz). **From now on, replace any XX for your downloaded ChEMBL database version.**
@@ -57,14 +57,14 @@ Log into MySQL and enter yout password:
 ```
 mysql -u root -p
 ```
-Create an empty database:
+Create an empty database on MySQL:
 ```
 mysql> create database chembl_XX DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 
 ```
 Logout of MySQL and run the following command to load data to the database (**this could take several hours**):
 ```
-mysql> -u root -p chembl_XX < chembl_XX_mysql.dmp
+mysql -u root -p chembl_XX < chembl_XX_mysql.dmp
 ```
 
 ## 1. Connect ChEMBL local MySQL database with the workflow ##
